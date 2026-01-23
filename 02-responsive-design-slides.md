@@ -7,20 +7,19 @@ Get this instruction: https://github.com/ruhendrawan/cs1520_recitation
 
 ---
 
-## How to work today
+## Work in pairs or alone
 
-- Work in pairs or alone
-  - If in pairs: work with your peer on the first and last part
-  - If alone: self reflect and write down on the worksheet
-- You do not need a grammar check
-- Don’t overcorrect
-- Write like you’re saying it out loud
+- If in pairs: work with your peer through all parts
+- If alone: self reflect and write down on the worksheet
+  - You do not need a grammar check
+  - Don’t overcorrect
+  - Write like you’re saying it out loud
 
 ---
 
 ## Reflection and Submission
 
-Submit in the google form: https://forms.gle/tYEtKjJunM1wb2we6
+Submit in the google form: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.gle/tYEtKjJunM1wb2we6)
 
 You need to submit the zip file if you're working alone, otherwise just fill in the form.
 
@@ -35,8 +34,7 @@ Upload zip files named as `<PITT ID>-<week>.zip`, e.g. `rah225-02.zip`, containi
 
 Pairs: talk in turns. Max **1 minute** per person before switching so everyone gets a chance to talk.
 
-Working alone? Download the worksheet here and write your responses there:
-https://github.com/ruhendrawan/cs1520_recitation/blob/main/recitations/02-responsive-design-worksheet.md
+Working alone? Download [02-responsive-design-worksheet.md](https://github.com/ruhendrawan/cs1520_recitation/raw/refs/heads/main/02-responsive-design-worksheet.md) and write your responses there.
 
 Pick **1–3 concepts** from this week’s lecture and explain them in your own words (fast + messy is fine).
 
@@ -167,8 +165,7 @@ Definition of done:
 
 Pairs: talk in turns. Max **1 minute** per person before switching so everyone gets a chance to talk.
 
-Working alone? Download the worksheet here and write your responses there:
-https://github.com/ruhendrawan/cs1520_recitation/blob/main/recitations/02-responsive-design-worksheet.md
+Working alone? Download [02-responsive-design-worksheet.md](https://github.com/ruhendrawan/cs1520_recitation/raw/refs/heads/main/02-responsive-design-worksheet.md) and write your responses there.
 
 ### A) What you did
 - Quick checklist is fine, no overcorrection needed
