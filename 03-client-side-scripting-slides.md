@@ -1,9 +1,9 @@
 ## Week 3: Client-side scripting (JavaScript)
 
-Slides: `slides/02_js.pdf`  
+Slides: `slides/03-client-side-scripting-slides.pdf`  
 Time: **50 minutes** (Tune In **10** / Activity **25** / Reflection **5** / Project Preparation **10**)
 
-Get this instruction: https://github.com/ruhendrawan/cs1520_recitation
+Get this instruction: [https://github.com/ruhendrawan/cs1520_recitation](https://github.com/ruhendrawan/cs1520_recitation)
 
 ---
 
@@ -11,7 +11,7 @@ Get this instruction: https://github.com/ruhendrawan/cs1520_recitation
 
 Work in pairs
 
-Submit in the google form: https://forms.gle/tYEtKjJunM1wb2we6
+Submit in the google form: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.gle/tYEtKjJunM1wb2we6)
 
 ---
 
@@ -47,19 +47,27 @@ Concept ideas (pick any 1–3):
 
 ## Part 2 — Activity (30 minutes)
 
-Break into pairs and run js02 and js03 
+Break into pairs and run `js02` and `js03`
 
-https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js02_vars_types.html
-https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js03_more_vars_types.html
-https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js03_more_vars_types.js
+js02
+- [js02_vars_types.html](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js02_vars_types.html)
 
-Each pair should make a guess filling out each comment, and then run the code to check the actual result.
+js03
+- [js03_more_vars_types.html](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js03_more_vars_types.html)
+- [js03_more_vars_types.js](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js03_more_vars_types.js)
 
-- Open DevTools Console
+Each pair should make a guess.
+Fill out each comment, and then run the code to check the actual result.
+
+- [Open DevTools Console](https://www.google.com/search?q=how+to+open+developer+console+in+chrome)
 
 ---
 
-References:
+- [Where is The Fun in JavaScript](https://github.com/denysdovhan/wtfjs)
+
+- [What is JS (runtime) engine](https://www.google.com/search?q=v8+js+engine)
+- [Number in JS: lacking precision](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- [Let Block vs Var Function](https://www.google.com/search?q=let+vs+var+js)
 
 - [MDN: JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [ECMA-262 spec](http://www.ecma-international.org/ecma-262/)
@@ -74,10 +82,10 @@ References:
 
 Pairs: talk in turns. Max **1 minute** per person before switching so everyone gets a chance to talk.
 
-### A) What's the programming concepts/ ideas that you see in the examples? 
+### A) What are the programming concepts/ ideas that you see in the examples? 
 - Quick checklist is fine, no overcorrection needed
 
-### B) What's the difference in comparison to other prgramming language?
+### B) What's the difference in comparison to other programming languages?
 - Quick checklist is fine, no overcorrection needed
 
 ### C) Connect it back (prior lecture)
@@ -86,11 +94,11 @@ Prior lecture idea to connect: **responsive design**
 - Examples: What would you keep CSS-only vs use JS for?
   - menu toggles, show/hide panels, saving preferences, validation, content updates
 
-Submit in the google form: https://forms.gle/tYEtKjJunM1wb2we6
+Submit in the google form: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.gle/tYEtKjJunM1wb2we6)
 
 ---
 
-## Project Preparation (10 minute)
+## Project Preparation (10 minutes)
 
 1. Install NPM
 https://nodejs.org/en/download
@@ -123,8 +131,8 @@ npm create vite@latest my-app -- --template react-ts
 
 https://react.dev/learn/react-developer-tools
 
-Do this part at home, spend 1-2 hour.
-Don't rush to finish, but learn by doing at your pace.
+Do this part at home, spend 1-2 hours.
+Don't rush to finish, but learn by doing at your own pace.
 
 It's okay to not finish all parts.
 
