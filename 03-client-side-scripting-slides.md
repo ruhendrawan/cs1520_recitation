@@ -1,7 +1,16 @@
+---
+theme: gaia
+_class: lead
+paginate: true
+backgroundColor: #fff
+backgroundImage: url('https://marp.app/assets/hero-background.svg')
+---
+
 ## Week 3: Client-side scripting (JavaScript)
 
 Slides: `slides/03-client-side-scripting-slides.pdf`  
-Time: **50 minutes** (Tune In **10** / Activity **25** / Reflection **5** / Project Preparation **10**)
+Time: **50 minutes**
+(Tune In **10** / Activity **25** / Reflection **5** / Project Preparation **10**)
 
 Get this instruction: [https://github.com/ruhendrawan/cs1520_recitation](https://github.com/ruhendrawan/cs1520_recitation)
 
@@ -17,11 +26,17 @@ Submit in the google form: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.g
 
 ## Part 1 — Tune In (10 minutes)
 
+<div class="slide">
+<div class="col">
+
 Pairs: talk in turns. Max **1 minute** per person before switching so everyone gets a chance to talk.
 
 Pick **1–3 concepts** from this week’s lecture and explain them in your own words (fast + messy is fine).
 
-Concept ideas (pick any 1–3):
+</div>
+<div class="col text-xxs">
+
+Concept ideas
 
 - JavaScript in HTML (`<script>...</script>` / external script)
 - JavaScript vs ECMAScript (spec vs implementation)
@@ -32,6 +47,9 @@ Concept ideas (pick any 1–3):
 - Arrays (methods like `push/pop`, `sort`, `join`)
 - Objects / ES2015 classes
 - Strict mode (`"use strict"`) and why it can break sloppy code
+
+</div>
+</div>
 
 ---
 
@@ -49,21 +67,18 @@ Concept ideas (pick any 1–3):
 
 Break into pairs and run `js02` and `js03`
 
-js02
-- [js02_vars_types.html](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js02_vars_types.html)
+js02: [js02_vars_types.html](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js02_vars_types.html)
 
-js03
-- [js03_more_vars_types.html](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js03_more_vars_types.html)
-- [js03_more_vars_types.js](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js03_more_vars_types.js)
+js03: [js03_more_vars_types.html](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js03_more_vars_types.html)
+and [js03_more_vars_types.js](https://github.com/nfarnan/cs1520_examples/blob/main/javascript/js03_more_vars_types.js)
 
-Each pair should make a guess.
-Fill out each comment, and then run the code to check the actual result.
+Each pair should make a guess. Fill out each comment, and then run the code to check the actual result.
 
 - [Open DevTools Console](https://www.google.com/search?q=how+to+open+developer+console+in+chrome)
 
 ---
 
-- [Where is The Fun in JavaScript](https://github.com/denysdovhan/wtfjs)
+- **[Where is The Fun in JavaScript](https://github.com/denysdovhan/wtfjs)**
 
 - [What is JS (runtime) engine](https://www.google.com/search?q=v8+js+engine)
 - [Number in JS: lacking precision](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
@@ -80,7 +95,13 @@ Fill out each comment, and then run the code to check the actual result.
 
 ## Part 3 — Reflection (5 minutes)
 
-Pairs: talk in turns. Max **1 minute** per person before switching so everyone gets a chance to talk.
+<div class="text-xxs">
+
+Talk in turns. Max **1 minute** per person before switching so everyone gets a chance to talk.
+Submit in the google form: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.gle/tYEtKjJunM1wb2we6)
+
+</div>
+<div class="text-xxs">
 
 ### A) What are the programming concepts/ ideas that you see in the examples? 
 - Quick checklist is fine, no overcorrection needed
@@ -94,11 +115,13 @@ Prior lecture idea to connect: **responsive design**
 - Examples: What would you keep CSS-only vs use JS for?
   - menu toggles, show/hide panels, saving preferences, validation, content updates
 
-Submit in the google form: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.gle/tYEtKjJunM1wb2we6)
+</div>
 
 ---
 
 ## Project Preparation (10 minutes)
+
+*Next week we'll work with React, get prepared!*
 
 1. Install NPM
 https://nodejs.org/en/download
@@ -138,3 +161,23 @@ It's okay to not finish all parts.
 
 - Quick Start: https://react.dev/learn
 - Creating UI component: https://react.dev/learn/describing-the-ui
+
+
+
+<style>
+.slide{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+
+.text-xxxs { font-size: 0.5rem; }
+.text-xxs { font-size: 0.625rem; }
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+</style>
