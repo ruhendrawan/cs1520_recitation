@@ -163,6 +163,8 @@ Definition of done:
 
 ## Part 3 — Reflection (10 minutes)
 
+All-time best web component is `<marquee>`. Look at this [example](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/marquee#examples) and be amazed!
+
 Pairs: talk in turns. Max **1 minute** per person before switching so everyone gets a chance to talk.
 
 Working alone? Download [02-responsive-design-worksheet.md](https://github.com/ruhendrawan/cs1520_recitation/raw/refs/heads/main/02-responsive-design-worksheet.md) and write your responses there.
