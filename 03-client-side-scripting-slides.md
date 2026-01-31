@@ -149,7 +149,7 @@ https://www.npmjs.com/package/react
 https://react.dev/learn/build-a-react-app-from-scratch
 
 ```
-npm create vite@latest my-app -- --template react-ts
+npm create vite@latest my-app -- --template react-js
 ```
 
 https://react.dev/learn/react-developer-tools
