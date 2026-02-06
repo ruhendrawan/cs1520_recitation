@@ -29,9 +29,7 @@ Keep 3 tabs open:
 
 ## Part 1 — Tune In (5 minutes)
 
-Pick **1–2 concepts** from `slides/03_react.pdf` that you think you’ll use *immediately* in the tutorial.
-
-Concept ideas:
+Pick **1–2 concepts** from `slides/03_react.pdf` that you think you’ll use *immediately* in the tutorial. For example:
 - React components render UI
 - Vite + npm workflow (`npm create vite@latest`, `npm install`, `npm run dev`)
 - JSX basics (`className`, `{}` expressions)
@@ -90,10 +88,12 @@ From the tutorial (tic-tac-toe):
 Goal: get a working dev setup + basic click interactivity.
 
 Do:
-1. Create a Vite React app.
+1. Create a Vite React app, or download the `tictactoe-sandbox.zip`
 2. Run the dev server.
 3. Start the tutorial: build `Square` and `Board`.
-4. Make clicking a square change what you see (any “state change” is a win).
+4. Clicking a square change what you see (any “state change” is a win).
+
+---
 
 Checkpoint:
 - `npm run dev` works
@@ -104,10 +104,10 @@ Checkpoint:
 ## Cycle 1 — Reflection (5 minutes, Google Doc)
 
 Write:
-1) What tutorial section(s) did you finish?  
-2) What was the most confusing line of code so far?  
-3) In your own words: what causes a component to re-render?  
-4) One specific next action for Cycle 2.
+1. What tutorial section(s) did you finish?  
+2. What was the most confusing line of code so far?  
+3. In your own words: what causes a component to re-render?  
+4. One specific next action for Cycle 2.
 
 ---
 
@@ -116,11 +116,14 @@ Write:
 Goal: make the game logic “real” (state + turns + lifting state up).
 
 Do:
-- Move state to the right place (lifting state up).
+- Move state to the right place (lifting  estate up).
 - Make turns alternate (X then O).
 - Keep updates immutable (copy arrays instead of mutating).
 
+---
+
 Checkpoint:
+- you can explain how to manage UI state (why immutable state)
 - you can explain where state lives
 - X/O turns work
 
@@ -129,10 +132,10 @@ Checkpoint:
 ## Cycle 2 — Reflection (5 minutes, Google Doc)
 
 Write:
-1) Where is your game state stored right now (which component)?  
-2) One example of an immutable update you did (copying array/object).  
-3) One bug you hit + how you debugged it (1–2 bullets).  
-4) One specific next action for Cycle 3.
+1. Where is your game state stored right now (which component)?  
+2. One example of an immutable update you did (copying array/object).  
+3. One bug you hit + how you debugged it (1–2 bullets).  
+4. One specific next action for Cycle 3.
 
 ---
 
@@ -153,9 +156,9 @@ Checkpoint:
 ## Cycle 3 — Reflection + Submit (5 minutes)
 
 In Google Doc:
-1) What part of the tutorial is still unfinished for you?  
-2) One React concept you understand better now.  
-3) One action you’ll take after recitation to finish (and your time estimate).
+1. What part of the tutorial is still unfinished for you?  
+2. One React concept you understand better now.  
+3. One action you’ll take after recitation to finish.
 
 Then submit: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.gle/tYEtKjJunM1wb2we6)
 
@@ -164,10 +167,10 @@ Then submit: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.gle/tYEtKjJunM1
 ## If you’re stuck
 
 Try one of these (in order):
-1) Re-read the last tutorial step and confirm your file matches the expected code.
-2) Open DevTools Console and read the error *top to bottom*.
-3) Add a `console.log(...)` right before/after the line you think is wrong.
-4) Ask the TA with: the error message + what you tried + what you expected.
+1. Re-read the last tutorial step and confirm your file matches the expected code.
+2. Open DevTools Console and read the error *top to bottom*.
+3. Add a `console.log(...)` right before/after the line you think is wrong.
+4. Ask the TA with: the error message + what you tried + what you expected.
 
 <style>
 .slide{
