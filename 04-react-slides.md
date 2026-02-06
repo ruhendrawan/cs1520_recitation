@@ -9,7 +9,6 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Week 4: React and the DOM
 
 Slides: `slides/03_react.pdf`  
-Tutorial: https://react.dev/learn/tutorial-tic-tac-toe  
 Time: **50 minutes** (Tune In **5** / Cycle 1 **15** / Cycle 2 **15** / Cycle 3 **15**)
 
 Get this instruction: [https://github.com/ruhendrawan/cs1520_recitation](https://github.com/ruhendrawan/cs1520_recitation)
