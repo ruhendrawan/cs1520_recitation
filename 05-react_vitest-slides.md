@@ -9,7 +9,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Week 5: React Testing Library 
 
 Slides: `slides/03_react.pdf`  
-Time: **50 minutes** (Tune In **10** / Activity **35** / Reflection + Submit **5**)
+Time: **50 minutes** (Tune In **5** / Activity **40** / Reflection + Submit **5**)
 
 Get this instruction: [https://github.com/ruhendrawan/cs1520_recitation](https://github.com/ruhendrawan/cs1520_recitation)
 
@@ -21,7 +21,7 @@ Work in pairs (discuss and share what you know/ assume/ learn)
 
 ---
 
-## Part 1 — Tune In (10 minutes)
+## Part 1 — Tune In (5 minutes)
 
 Pick **1–2 concepts** from `slides/03_react.pdf` and explain them in your own words (fast + messy is fine).
 
@@ -40,7 +40,7 @@ What is it (in your own words)? Where would you use it?
 
 ---
 
-## Part 2 — Activity (35 minutes)
+## Part 2 — Activity (40 minutes)
 
 <div class="text-sm">
 
@@ -79,13 +79,14 @@ Read
 
 <div class="text-xs">
 
+Submit the code individually in https://classroom.github.com/a/fd5rEEZc
+
 `src/App.jsx` contains the code from the React Tic-Tac-Toe tutorial. Write some tests in `src/App.test.jsx` to verify it is working correctly.
 
-**You should write one test to verify a case when X would win the game, and another to verify a case when O would win the game.**
+**You should write 2 tests: 1) to verify a case when X would win the game, and 2) verify a case when O would win.**
 
 You are free to modify the application in `App.jsx` to better support testing
 Refer to the documentation for React Testing Library. 
-
 Note that you can use the aria-label property of HTML elements to help match an element by role and name: https://testing-library.com/docs/queries/byrole/#api
 
 Refer to the provided tests from `Project 1` for additional usage examples.
