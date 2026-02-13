@@ -34,7 +34,7 @@ Pick **1–2 concepts** from `slides/03_react.pdf` and explain them in your own 
 - props in the component function
 - lifting state
 
-What is it (in one sentence)? What’s a common bug this concept prevents? Where would you use it in a real app (web, data, automation)?
+What is it (in your own words)? Where would you use it?
 
 </div>
 
@@ -42,19 +42,24 @@ What is it (in one sentence)? What’s a common bug this concept prevents? Where
 
 ## Part 2 — Activity (35 minutes)
 
-Keep working in pairs.
-Develop the code individually in https://classroom.github.com/a/fd5rEEZc
+<div class="text-sm">
 
 Learn to write `vitest` for React project using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
+
+Keep working in pairs. Develop the code individually in https://classroom.github.com/a/fd5rEEZc
 
 But, WHYY?
 - Creates shared understanding, between team members, of expected component behavior
 - Tests UI component behavior (what renders and how it responds to state changes)
 - Confident in refactoring (improve code readability without modifying behaviors)
 
+</div>
+
 ---
 
 ## If you’re stuck
+
+<div class="text-sm">
 
 Try these (in order):
 1. Print intermediate values (`print(...)`) to confirm your assumptions.
@@ -63,25 +68,31 @@ Try these (in order):
 4. Ask the TA with: the error + what you tried + what you expected.
 
 Read
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - [React Testing Library Tutorial](https://www.robinwieruch.de/react-testing-library/)
+
+</div>
 
 ---
 
 ## Test the Tic-Tac-Toe project
 
+<div class="text-xs">
+
 `src/App.jsx` contains the code from the React Tic-Tac-Toe tutorial. Write some tests in `src/App.test.jsx` to verify it is working correctly.
 
-You should write one test to verify a case when X would win the game, and another to verify a case when O would win the game.
+**You should write one test to verify a case when X would win the game, and another to verify a case when O would win the game.**
 
 You are free to modify the application in `App.jsx` to better support testing
 Refer to the documentation for React Testing Library. 
 
-Specifically note that you can use the aria-label property of HTML elements to help match an element by role and name: https://testing-library.com/docs/queries/byrole/#api
+Note that you can use the aria-label property of HTML elements to help match an element by role and name: https://testing-library.com/docs/queries/byrole/#api
 
 Refer to the provided tests from `Project 1` for additional usage examples.
 
 Note that liberal use of `regular expressions` are made in Testing Library. `/pattern/i` will perform case-insensistive matches looking for the string "pattern".
+
+</div>
 
 ---
 
