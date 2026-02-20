@@ -6,7 +6,7 @@ backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
-## Week 5: Python
+## Week 6: Python
 
 Slides: `slides/05_python.pdf`  
 Time: **50 minutes** (Tune In **10** / Activity **35** / Reflection + Submit **5**)
@@ -29,6 +29,14 @@ Work in pairs
 
 ## Part 1 — Tune In (10 minutes)
 
+In turn, present brifely the status of your Project 1.
+
+<!--
+---
+
+## ARCHIVED SLIDE
+## Skip this, and go to Part 2
+
 Pick **1–2 concepts** from `slides/05_python.pdf` and explain them in your own words (fast + messy is fine).
 
 <div class="text-xs">
@@ -43,6 +51,7 @@ Pick **1–2 concepts** from `slides/05_python.pdf` and explain them in your own
 What is it (in one sentence)? What’s a common bug this concept prevents? Where would you use it in a real app (web, data, automation)?
 
 </div>
+-->
 
 ---
 
@@ -224,14 +233,7 @@ submit your attendance in the google form: [https://forms.gle/tYEtKjJunM1wb2we6]
 
 ## Project 1: React (UI or state)
 
-Start working on your React final project individually:
-- UI: lay out the core screens/components (even static)
-- State: define your state shape + wire up one “happy path”
-
-Pick any small deliverable: a new component renders with placeholder data; or one `useState` flow updates UI on click.
-
-You'll be presenting (casually) your progress and personal challenge next week, to each other.
-
+Prepare for submission!
 
 
 <style>
