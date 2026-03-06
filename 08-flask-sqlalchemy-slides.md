@@ -49,7 +49,7 @@ In turn, answer quickly:
 
 ## Part 2 — Activity (40 minutes)
 
-Goal: design an MVP microblog, then implement at least **two features**:
+Goal: develop microblog, implement at least **two features**:
 
 - **Posting**: create a post
 - **Reading**: read your timeline (you + followed users)
@@ -105,45 +105,70 @@ Advanced
 
 ## Step 2 — Data model (5 minutes)
 
-Pick the set of tables that supports your MVP.
+Define the set of tables
+
+<div class="slide">
+<div class="col text-sm">
 
 Starting schema:
 - `User` (who)
 - `Post` (what)
 - `Follow` (who follows whom)
 
+</div>
+<div class="col text-sm">
+
 Relationships:
-- one user → many posts
-- many users ↔ many users (follow)
+- one user -> many posts
+- many users <-> many users (follow)
+
+</div>
+</div>
 
 ---
 
 ## Example models (SQLAlchemy ORM)
 
+<div class="text-xs">
+
 ```py
+from datetime import datetime
+from sqlalchemy import ForeignKey, String, func
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 class User(db.Model):
-  id = db.Column(db.Integer, primary_key=True)
-  username = db.Column(db.String(32), unique=True, nullable=False)
-  created_at = db.Column(db.DateTime, server_default=db.func.now())
-  posts = db.relationship("Post", backref="user", lazy=True)
+  __tablename__ = "user"
+
+  id: Mapped[int] = mapped_column(primary_key=True)
+  username: Mapped[str] = mapped_column(String(32), unique=True, nullable=False)
+  created_at: Mapped[datetime] = mapped_column(server_default=func.now())
+
+  posts: Mapped[list["Post"]] = relationship(back_populates="user")
 
 class Post(db.Model):
-  id = db.Column(db.Integer, primary_key=True)
-  user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-  body = db.Column(db.String(280), nullable=False)
-  created_at = db.Column(db.DateTime, server_default=db.func.now(), index=True)
+  __tablename__ = "post"
+
+  id: Mapped[int] = mapped_column(primary_key=True)
+  user_id: Mapped[int] = mapped_column(ForeignKey("user.id"), nullable=False)
+  body: Mapped[str] = mapped_column(String(280), nullable=False)
+  created_at: Mapped[datetime] = mapped_column(server_default=func.now(), index=True)
+
+  user: Mapped["User"] = relationship(back_populates="posts")
 
 class Follow(db.Model):
-  follower_id = db.Column(db.Integer, db.ForeignKey("user.id"), primary_key=True)
-  followed_id = db.Column(db.Integer, db.ForeignKey("user.id"), primary_key=True)
-  created_at = db.Column(db.DateTime, server_default=db.func.now())
+  __tablename__ = "follow"
+
+  follower_id: Mapped[int] = mapped_column(ForeignKey("user.id"), primary_key=True)
+  followed_id: Mapped[int] = mapped_column(ForeignKey("user.id"), primary_key=True)
+  created_at: Mapped[datetime] = mapped_column(server_default=func.now())
 ```
+</div>
 
 ---
 
 ## Step 3 — Routes (5 minutes)
 
-Write a “route table” for your MVP.
+Create a “route” list
 
 <div class="slide">
 <div class="col text-xs">
@@ -172,7 +197,7 @@ Write
 
 ```py
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///microblog.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.sqlite"
 db = SQLAlchemy(app)
 
 @app.get("/")
@@ -189,8 +214,8 @@ def create_post():
 ## Jinja2 templating
 
 Why templates?
-- Your route returns **HTML**, but the HTML should be **data-driven** (posts, usernames, timestamps).
-- Jinja2 lets you combine: **query results** + **HTML** safely.
+- Route returns **HTML**, but the HTML should be **data-driven** (posts, usernames, timestamps).
+- Jinja2 help combine: **query results** + **HTML** safely.
 
 Convention:
 - Put templates in a folder named `templates/`
@@ -198,18 +223,30 @@ Convention:
 
 ---
 
-## Timeline route → template
+## Timeline route -> template
 
-Route (server) decides *what* data to show:
+<div class="slide">
+<div class="col text-sm">
+
+Route decides *what* data to show:
 
 ```py
 from flask import render_template
 
 @app.get("/")
 def timeline():
-  posts = Post.query.order_by(Post.created_at.desc()).limit(50).all()
-  return render_template("timeline.html", posts=posts)
+  posts = Post.query.order_by(
+      Post.created_at.desc()
+    ).limit(50).all()
+
+  return render_template(
+    "timeline.html",
+    posts=posts
+  )
 ```
+
+</div>
+<div class="col text-sm">
 
 Template decides *how* it looks:
 
@@ -218,15 +255,22 @@ Template decides *how* it looks:
 <h1>Timeline</h1>
 {% for p in posts %}
   <div class="post">
-    <b>@{{ p.user.username }}</b> — {{ p.created_at }}
+    <b>@{{ p.user.username }}</b>
+    — {{ p.created_at }}
     <p>{{ p.body }}</p>
   </div>
 {% endfor %}
 ```
 
+</div>
+</div>
+
 ---
 
-## Template inheritance
+## Template inheritance (Optional)
+
+<div class="slide">
+<div class="col text-xs">
 
 Make a shared layout once.
 
@@ -240,6 +284,11 @@ Make a shared layout once.
 <main>{% block content %}{% endblock %}</main>
 ```
 
+</div>
+<div class="col text-xs">
+
+Reuse in other pages.
+
 ```html
 <!-- templates/timeline.html -->
 {% extends "base.html" %}
@@ -250,6 +299,9 @@ Make a shared layout once.
 {% endblock %}
 ```
 
+</div>
+</div>
+
 Checkpoint:
 ✅ you can explain why `base.html` makes your app easier to change
 
@@ -257,7 +309,7 @@ Checkpoint:
 
 ## Forms: create a post (Jinja2 + Flask)
 
-Simple HTML form:
+HTML form for posting; server reads `request.form`; and redirects back to the timeline page.
 
 ```html
 <form method="post" action="{{ url_for('create_post') }}">
@@ -266,25 +318,29 @@ Simple HTML form:
 </form>
 ```
 
-Server reads `request.form` and redirects back to the timeline.
+<div class="text-xs">
 
 Checkpoint:
-✅ you can trace: form submit → route handler → DB insert → redirect → timeline render
+✅ understand the web request/ response lifecycle
+✅ able to trace: form submit → route handler → DB insert → redirect → timeline render
+
+</div>
 
 ---
 
-## Safety: escaping (1 minute)
+## Safety: escaping string
 
 Jinja2 escapes by default:
 - `{{ p.body }}` is safe (HTML is escaped)
 - Avoid `|safe` unless you fully control the content
 
-Microblog rule of thumb:
-- treat post text as **plain text**, not HTML
+Don't trust users' input. Treat post text as **plain text**, not HTML
 
 ---
 
 ## Step 5 — “Friends feed” query (optional)
+
+<div class="text-xs">
 
 Design the query before you code it:
 - timeline = your posts + posts by people you follow
@@ -298,14 +354,62 @@ Checkpoint:
 ✅ you can write the SQL in words (“select posts where…”)  
 ✅ you can write the ORM query in code (even if it errors at first)
 
+</div>
+
 ---
 
-## Debugging tip: inspect SQLite (2 minutes)
+## Debugging ORM in a route with `breakpoint()`
+
+<div class="slide">
+<div class="col text-xs">
+
+Place the `breakpoint()` in routed function
+
+```py
+@app.get("/")
+def timeline():
+  q = Post.query.order_by(Post.created_at.desc()).limit(50)
+  breakpoint()  # pauses here when you load /
+  posts = q.all()
+  return render_template("timeline.html", posts=posts)
+```
+
+</div>
+<div class="col text-xs">
+
+Terminal (where `flask run` is running):
+
+```bash
+$ flask --app app run --debug
+ * Running on http://127.0.0.1:5000
+
+# hit the route (browser)
+
+> app.py(??)timeline()
+-> posts = q.all()
+(Pdb) p q
+<flask_sqlalchemy.query.Query object at 0x...>
+(Pdb) p str(q.statement)
+'SELECT post.id, post.user_id, post.body, post.created_at ...'
+(Pdb) p q.all()
+[<Post 12>, <Post 11>, ...]
+(Pdb) c
+```
+
+</div>
+</div>
+
+Note: remove `breakpoint()` before you submit / deploy.
+
+
+---
+
+## Debugging tip: inspect SQLite
 
 In a terminal:
 
 ```bash
-sqlite3 microblog.db
+sqlite3 database.sqlite
 .tables
 .schema user
 select * from post order by created_at desc limit 5;
@@ -326,7 +430,7 @@ No grammar check. Don’t overcorrect. Answer these:
 
 Submit your attendance in the google form: [https://forms.gle/tYEtKjJunM1wb2we6](https://forms.gle/tYEtKjJunM1wb2we6)
 
----
+
 
 <style>
 .slide{
