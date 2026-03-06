@@ -420,6 +420,15 @@ Checkpoint:
 
 ---
 
+Readings
+
+- https://flask.palletsprojects.com/en/stable/quickstart/
+- https://flask-sqlalchemy.readthedocs.io/en/stable/models/#defining-models
+- https://flask-sqlalchemy.readthedocs.io/en/stable/quickstart/
+- https://jinja.palletsprojects.com/en/stable/templates/
+
+---
+
 ## Part 3 — Reflection + Submit (5 minutes)
 
 No grammar check. Don’t overcorrect. Answer these:
