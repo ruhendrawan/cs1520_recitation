@@ -8,4 +8,4 @@
 - 13-Feb [Week 5: React Testing](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/05-react_vitest-slides.html?min=1)
 - 20-Feb [Week 6: Python](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/06-python-slides.html?min=1)
 - 27-Feb Week 7: Exam 1
-- 03-Mar Week 8: TBA
+- 03-Mar [Week 8: Flask + SQLAlchemy (Micro Blogging)](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/08-flask-sqlalchemy-slides.html?min=1)
