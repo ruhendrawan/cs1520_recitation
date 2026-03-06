@@ -105,14 +105,14 @@ Advanced
 
 ## Step 2 — Data model (5 minutes)
 
-Pick the smallest set of tables that supports your MVP.
+Pick the set of tables that supports your MVP.
 
-Minimum suggested schema:
+Starting schema:
 - `User` (who)
 - `Post` (what)
 - `Follow` (who follows whom)
 
-Key relationships:
+Relationships:
 - one user → many posts
 - many users ↔ many users (follow)
 
@@ -167,10 +167,8 @@ Write
 
 ## Step 4 — Implementing the Logic 
 
-Implement just enough to demo:
-- create a post
+- create a post, stored and persisted in database
 - see it appear in a timeline
-- posts are stored and persisted in database
 
 ```py
 app = Flask(__name__)

@@ -103,14 +103,14 @@ flask --app app run --debug
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-theme="gaia" lang="en-US" data-marpit-pagination="8" style="--paginate:true;--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--theme:gaia;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="20">
 <h2 id="step-2--data-model-5-minutes">Step 2 — Data model (5 minutes)</h2>
-<p>Pick the smallest set of tables that supports your MVP.</p>
-<p>Minimum suggested schema:</p>
+<p>Pick the set of tables that supports your MVP.</p>
+<p>Starting schema:</p>
 <ul>
 <li><code>User</code> (who)</li>
 <li><code>Post</code> (what)</li>
 <li><code>Follow</code> (who follows whom)</li>
 </ul>
-<p>Key relationships:</p>
+<p>Relationships:</p>
 <ul>
 <li>one user → many posts</li>
 <li>many users <img class="emoji" draggable="false" alt="↔" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2194.svg" data-marp-twemoji=""/> many users (follow)</li>
@@ -159,11 +159,9 @@ flask --app app run --debug
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-background-color="#fff" data-background-image="url('https://marp.app/assets/hero-background.svg')" data-theme="gaia" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--background-color:#fff;--background-image:url('https://marp.app/assets/hero-background.svg');--theme:gaia;background-color:#fff;background-image:url('https://marp.app/assets/hero-background.svg');background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="20">
 <h2 id="step-4--implementing-the-logic">Step 4 — Implementing the Logic</h2>
-<p>Implement just enough to demo:</p>
 <ul>
-<li>create a post</li>
+<li>create a post, stored and persisted in database</li>
 <li>see it appear in a timeline</li>
-<li>posts are stored and persisted in database</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-py">app = Flask(__name__)
 app.config[<span class="hljs-string">&quot;SQLALCHEMY_DATABASE_URI&quot;</span>] = <span class="hljs-string">&quot;sqlite:///microblog.db&quot;</span>
