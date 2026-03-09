@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Week 9: fetch recitation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+  </head>
+  <body>
+    <main>
+      <h1>AJAX + <code>fetch()</code></h1>
+
+      <p>
+        <label>
+          <input id="fail-toggle" type="checkbox" />
+          Simulate Failed Load / Post
+        </label>
+      </p>
+
+      <p>
+        <button id="load-btn" type="button">Load Items</button>
+      </p>
+
+      <form id="create-form">
+        <p>
+          <input id="text" name="text" type="text" placeholder="Type an item..." autocomplete="off" />
+          <button type="submit">Add</button>
+        </p>
+      </form>
+
+      <p id="status" class="status" aria-live="polite"></p>
+
+      <h2>Items</h2>
+      <ul id="items"></ul>
+    </main>
+  </body>
+</html>

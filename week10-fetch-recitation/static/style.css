@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  margin: 24px;
+}
+
+.status {
+  min-height: 1.25rem;
+}
+
+.status.error {
+  color: #b00020;
+}
+
+.item {
+  margin-bottom: 8px;
+}

@@ -9,3 +9,5 @@
 - 20-Feb [Week 6: Python](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/06-python-slides.html?min=1)
 - 27-Feb Week 7: Exam 1
 - 03-Mar [Week 8: Flask + SQLAlchemy (Micro Blogging)](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/08-flask-sqlalchemy-slides.html?min=1)
+- 10-Mar Week 9: Spring Break 
+- 17-Mar [Week 10: AJAX + fetch](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/10-ajax-fetch-slides.html?min=1)
