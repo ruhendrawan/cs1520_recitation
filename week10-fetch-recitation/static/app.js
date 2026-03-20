@@ -32,6 +32,17 @@ function loadItems() {
   // TODO: Use the JSON data to update the page.
   // TODO: What exactly is inside `data`?
   // TODO: Use render() to update the page with the items from the server response.
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        setStatus(response.statusText, true);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      render(data.items);
+      setStatus("")
+    })
 }
 
 function addItem(e) {
@@ -54,6 +65,21 @@ function addItem(e) {
   // TODO: Repeat the same HTTP status check you used in loadItems().
   // TODO: Render the updated items from the server response.
   // TODO: Clear the text box after a successful POST.
+  fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlunencoded" },
+    body: `text=${encodeURIComponent(text)}`
+  })
+    .then((response) => {
+      if (!response.ok) {
+        setStatus(response.statusText, true)
+      }
+      return response.json();
+    })
+    .then((data) => {
+      render(data.items);
+      setStatus("")
+    })
 }
 
 loadBtn.addEventListener("click", loadItems);
