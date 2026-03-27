@@ -192,7 +192,9 @@ Implement `addItem()`:
 fetch("/new_item", {
   method: "POST",
   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  body: `text=${encodeURIComponent(text)}`,
+  // Automatically converted to "text=hot%20dog"
+  body: new URLSearchParams({ text: text }),
+  // body: `text=${encodeURIComponent(text)}`,
 });
 ```
 
