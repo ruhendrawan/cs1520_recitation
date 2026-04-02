@@ -12,4 +12,4 @@
 - 10-Mar Week 9: Spring Break 
 - 20-Mar [Week 10: AJAX + fetch](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/10-ajax-fetch-slides.html?min=1)
 - 27-Mar [Week 11: HTTP client requests](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/11-http-requests-slides.html?min=1)
-- 03-Apr [Week 12: Rust ownership](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/12-rust-ownership-slides.html?min=1))
+- 03-Apr [Week 12: Rust ownership](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/12-rust-ownership-slides.html?min=1)
