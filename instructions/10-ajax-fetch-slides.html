@@ -175,7 +175,9 @@ flask --app app run --debug
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-js"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;/new_item&quot;</span>, {
   <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,
   <span class="hljs-attr">headers</span>: { <span class="hljs-string">&quot;Content-Type&quot;</span>: <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span> },
-  <span class="hljs-attr">body</span>: <span class="hljs-string">`text=<span class="hljs-subst">${<span class="hljs-built_in">encodeURIComponent</span>(text)}</span>`</span>,
+  <span class="hljs-comment">// Automatically converted to &quot;text=hot%20dog&quot;</span>
+  <span class="hljs-attr">body</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">URLSearchParams</span>({ <span class="hljs-attr">text</span>: text }),
+  <span class="hljs-comment">// body: `text=${encodeURIComponent(text)}`,</span>
 });
 </code></pre>
 <p>Checkpoint: adding an item updates the list without page reload.</p>
