@@ -43,7 +43,9 @@ def list_todos():
     # Notes:
     # - Why is GET the right method here?
     # - What does the response body look like: list, dict, or something else?
-    pass
+    response = requests.get(build_url("/todos"))
+    show_response("List Todos", response)
+    return response
 
 
 def get_todo(todo_id="todo1"):
