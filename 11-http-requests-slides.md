@@ -38,9 +38,45 @@ By the end you should be able to:
 
 ---
 
+## Demonstration: Raw TCP with `netcat` (nc)
+
+<div class="slide">
+<div class="col text-xs">
+
+`netcat` (`nc`) is a tool for sending/receiving raw data over the network (TCP/UDP).
+
+**TCP/IP**: IP routes packets (where to send); TCP gives a reliable, ordered byte stream.
+
+```bash
+❯ nc example.com 80 -w 10000
+GET / HTTP/1.1
+Host: example.com
+
+```
+
+Opens a **TCP connection** to port **80** (HTTP). Perform DNS lookup/ resolution automatically.
+- Use `nslookup` or `ping example.com` to get the IP address.
+
+</div>
+<div class="col text-xs">
+
+- An **empty line** (\r\n\r\n or two consecutive newline characters) serves as a delimiter.
+  - The **first delimiter** ends headers and marks where the **body** would start.
+  - The **second empty line** marks the end of message.
+- This request only contains header, without body (data/params).
+
+- `-w 10000` increase the default timeout (automatic close).
+  - Idle clients (open connection) reduce available slots, new clients may fail to
+  connect.
+
+</div>
+</div>
+
+---
+
 ## Part 1 — Review raw HTTP in Python
 
-Open, Run and Review: `recitations/week11-http-requests/raw_http.py`
+Open, Run and Review: `week11-http-requests/raw_http.py`
 Answer the questions in the Doc.
 
 ```py
@@ -58,7 +94,7 @@ print(response.decode())
 
 ## Part 2 — Build an HTTP client with `requests`
 
-Open: `recitations/week11-http-requests`
+Open: `week11-http-requests`
 - `api_ex.py` -> Week 11 Flask todo API from `cs1520_examples`
 - `client.py` -> your starter for integration-style API calls
 
