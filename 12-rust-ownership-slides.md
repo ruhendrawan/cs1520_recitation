@@ -10,7 +10,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 Slides: `slides/11_rust.pdf`  
 Date: **April 3, 2026**  
-Time: **50 minutes** (Ownership Review **10** / Linked List Work **35** / Reflection + Submit **5**)
+Time: **50 minutes** (Ownership with Linked List **40** / Reflection + Submit **10**)
 
 Get this instruction: [https://github.com/ruhendrawan/cs1520_recitation](https://github.com/ruhendrawan/cs1520_recitation)
 
@@ -37,7 +37,7 @@ By the end you should be able to:
 
 ---
 
-## Part 1 — Ownership review (10 minutes)
+## Part 1 — Ownership (40 minutes)
 
 Look at the ownership hint:
 
@@ -137,7 +137,7 @@ If you get stuck:
 
 ---
 
-## Part 2 — Reflection + Submit (5 minutes)
+## Part 2 — Reflection + Submit (10 minutes)
 
 No grammar check. Don’t overcorrect. Answer these:
 
