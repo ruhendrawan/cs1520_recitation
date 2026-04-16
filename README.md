@@ -14,3 +14,4 @@
 - 27-Mar [Week 11: HTTP client requests](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/11-http-requests-slides.html?min=1)
 - 03-Apr [Week 12: Rust ownership](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/12-rust-ownership-slides.html?min=1)
 - 10-Apr [Week 13: Rust iterators + closures](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/13-rust-iter-closures-slides.html?min=1)
+- 17-Apr [Week 14: Rust API](https://raw.githack.com/ruhendrawan/cs1520_recitation/main/instructions/14-rust-api-slides.html?min=1)
