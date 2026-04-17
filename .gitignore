@@ -3,3 +3,6 @@ week11-http-requests/.venv
 week10-fetch-recitation/__pycache__
 week12-rust-linked-list/target
 week12-rust-linked-list/Cargo.lock
+Cargo.lock
+target/
+__pycache__/
